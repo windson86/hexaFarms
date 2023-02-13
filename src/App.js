@@ -26,10 +26,13 @@ function App() {
 
   function handleMath() {
     axios
-      .post("http://api.mathjs.org/v4/", apiData)
+      .post("https://api.mathjs.org/v4/", apiData)
       .then(function (response) {
         console.log(response.data);
-        updateResult({ math: response.data.result, error: "" });
+        updateResult({
+          math: response.data.result,
+          error: response.data.error,
+        });
       })
       .catch(function (error) {
         console.log(error);
