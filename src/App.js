@@ -45,6 +45,7 @@ function App() {
       <div className="App-main">
         <div class="centered">
           <input
+            className="input"
             type="text"
             id="mathProblem"
             name="mathProblem"
